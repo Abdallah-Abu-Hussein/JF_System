@@ -3,10 +3,10 @@ public class Passenger extends Person{
     private int Number_Of_trips;
     private int Ticket_Price;
 
-    public Passenger(String name, String nationality, int passport_Number, int number_Of_trips, int ticket_Price) {
+    public Passenger(String name, String nationality, int passport_Number, int ticket_Price) {
         super(name, nationality, passport_Number);
-        Number_Of_trips = number_Of_trips;
         Ticket_Price = ticket_Price;
+//        Number_Of_trips = 3;
     }
 
     public int getNumber_Of_trips() {
@@ -27,9 +27,9 @@ public class Passenger extends Person{
 
     @Override
     public String toString() {
-        return "Passenger{" +
-                "Number_Of_trips=" + Number_Of_trips +
-                ", Ticket_Price=" + Ticket_Price +
-                '}';
+        return "Passenger{" + super.toString()+
+                "  Number_Of_trips= " + Number_Of_trips +
+                ", Ticket_Price= " + Ticket_Price +
+                '}'+'\n';
     }
 }

@@ -6,13 +6,14 @@ public class Airport {
     private String Name;
     private String City;
     private String Country;
-    ArrayList<Flight> Departing_flights;
-    ArrayList<Flight> Arrival_flights;
+    ArrayList<Flight> Departing_flights = new ArrayList<>();
+    ArrayList<Flight> Arrival_flights = new ArrayList<>();
 
     public Airport(String name, String city, String country) {
         Name = name;
         City = city;
         Country = country;
+
     }
 
     public String getName() {
@@ -45,7 +46,7 @@ public class Airport {
                 "Name='" + Name + '\'' +
                 ", City='" + City + '\'' +
                 ", Country='" + Country + '\'' +
-                '}';
+                '}'+ '\n' ;
     }
 }
 

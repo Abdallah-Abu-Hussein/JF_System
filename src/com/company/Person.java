@@ -37,10 +37,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "Name='" + Name + '\'' +
-                ", Nationality='" + Nationality + '\'' +
-                ", passport_Number=" + passport_Number +
-                '}';
+        return
+                "Name = '" + Name + '\'' +
+                ", Nationality = ' " + Nationality + '\'' +
+                ", passport_Number = " + passport_Number ;
     }
 }

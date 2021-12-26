@@ -9,16 +9,28 @@ public class Flight {
     private Airport Arrival_Airport;
     private Aircraft Aircraft;
     private Pilot Pilot;
-    ArrayList<Passenger>Passengers;
+    ArrayList<Passenger>Passengers = new ArrayList<>();
 
-    public Flight(int flight_Number, int duration, Airport departing_Airport, Airport arrival_Airport, com.company.Aircraft aircraft, com.company.Pilot pilot) {
+    public Flight(int flight_Number, int duration, Airport departing_Airport, Airport arrival_Airport,Aircraft aircraft, Pilot pilot) {
         Flight_Number = flight_Number;
         Duration = duration;
         Departing_Airport = departing_Airport;
+        departing_Airport.Departing_flights.add(this);
+
         Arrival_Airport = arrival_Airport;
+        arrival_Airport.Arrival_flights.add(this);
+
         Aircraft = aircraft;
+
         Pilot = pilot;
+        Pilot.setFlying_Hours(Pilot.getFlying_Hours()+this.Duration);
+
     }
+    public void add_passenger(Passenger p){
+        Passengers.add(p);
+        p.setNumber_Of_trips(p.getNumber_Of_trips()+1);
+    }
+
 
     public int getFlight_Number() {
         return Flight_Number;
@@ -52,32 +64,31 @@ public class Flight {
         Arrival_Airport = arrival_Airport;
     }
 
-    public com.company.Aircraft getAircraft() {
+    public Aircraft getAircraft() {
         return Aircraft;
     }
 
-    public void setAircraft(com.company.Aircraft aircraft) {
+    public void setAircraft(Aircraft aircraft) {
         Aircraft = aircraft;
     }
 
-    public com.company.Pilot getPilot() {
+    public Pilot getPilot() {
         return Pilot;
     }
 
-    public void setPilot(com.company.Pilot pilot) {
+    public void setPilot(Pilot pilot) {
         Pilot = pilot;
     }
 
     @Override
     public String toString() {
-        return "Flight{" +
-                "Flight_Number=" + Flight_Number +
-                ", Duration=" + Duration +
-                ", Departing_Airport=" + Departing_Airport +
-                ", Arrival_Airport=" + Arrival_Airport +
-                ", Aircraft=" + Aircraft +
-                ", Pilot=" + Pilot +
-                ", Passengers=" + Passengers +
-                '}';
+        return
+                "Flight_Number = " + Flight_Number +
+                ", Aircraft = " + Aircraft +
+                        ", Duration = " + Duration +
+                '\n'+", Pilot= " + Pilot +'\n'+
+                ", Departing_Airport = " + Departing_Airport +'\n'+
+                ", Arrival_Airport = " + Arrival_Airport +'\n';
+
     }
 }

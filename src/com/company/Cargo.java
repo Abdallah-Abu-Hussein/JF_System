@@ -17,8 +17,6 @@ public class Cargo extends Aircraft {
 
     @Override
     public String toString() {
-        return "Cargo{" +
-                "Load_in_Ton=" + Load_in_Ton +
-                '}';
+        return super.toString() + " Load_in_Ton=" + Load_in_Ton ;
     }
 }

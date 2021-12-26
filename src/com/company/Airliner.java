@@ -15,4 +15,11 @@ public class Airliner extends Aircraft{
     public void setNumber_Of_Passengers(int number_Of_Passengers) {
         Number_Of_Passengers = number_Of_Passengers;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+
+                " Number_Of_Passengers = " + Number_Of_Passengers ;
+
+    }
 }
