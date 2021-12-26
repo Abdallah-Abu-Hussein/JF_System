@@ -17,3 +17,4 @@ The summation of the ticket price of all passengers of the flight
 Pilots and Passengers are persons, Persons have name, nationality and passport number. Each Passenger has the number of travelled KM and the ticket price. Pilots stores the flying hours and a list of spoken languages.
 Note: Flights and Aircrafts are too general.
 It has been decided to use an object oriented approach to design and implement the system
+![img.png](src/com/company/img.png)
