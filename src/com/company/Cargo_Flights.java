@@ -25,6 +25,7 @@ public class Cargo_Flights extends Flight {
     public void setCost_per_Ton(int cost_per_Ton) {
         Cost_per_Ton = cost_per_Ton;
     }
+  @Override
    public int get_revenue(){
         return getCost_per_Ton()*getLoad_In_Tons();
    }

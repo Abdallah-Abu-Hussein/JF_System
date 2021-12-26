@@ -32,6 +32,10 @@ public class Flight {
     }
 
 
+    public int get_revenue(){
+        int i = 0;
+        return i;
+    }
     public int getFlight_Number() {
         return Flight_Number;
     }

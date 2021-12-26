@@ -32,6 +32,13 @@ public static void main(String[] args) {
 
     Airliner_Flights f1 = new Airliner_Flights(54738389,33,A1,A2,AC1,p1);
 
+    Cargo cargo = new Cargo("AirBas","me",56,44);
+
+    Flight f = new Airliner_Flights(55,6,A1,A2,AC1,p1);
+    Flight fe = new Cargo_Flights(66,3,A2,A1,cargo,p1,400,3);
+
+    System.out.println(f.get_revenue());
+
 
 //        filling the Airliner without fill method
 
@@ -83,22 +90,21 @@ public static void main(String[] args) {
 ////////// test keeping track of a passenger number of trips \\\\\\\\\
 
 
- Passenger pa1 = new Passenger("toto","japan",666,16754);
-Airliner_Flights aa = new Airliner_Flights(444,5,A2,A1,AC1,p1);
-Airliner_Flights a = new Airliner_Flights(434,5,A2,A1,AC1,p1);
-a.add_passenger(pa1);
-aa.add_passenger(pa1);
-
-
-System.out.println("Number of trips for toto :"+ pa1.getNumber_Of_trips());
- System.out.println(a.Passengers);
- System.out.println(aa.Passengers);
+// Passenger pa1 = new Passenger("toto","japan",666,16754);
+//Airliner_Flights aa = new Airliner_Flights(444,5,A2,A1,AC1,p1);
+//Airliner_Flights a = new Airliner_Flights(434,5,A2,A1,AC1,p1);
+//a.add_passenger(pa1);
+//aa.add_passenger(pa1);
+//
+//
+//    System.out.println("Number of trips for toto :"+ pa1.getNumber_Of_trips());
+//    System.out.println(aa.Passengers);
+//    System.out.println(a.Passengers);
 
 ////////// Testing the Cargo stuff \\\\\\\\\
 
 
 
-    Cargo cargo = new Cargo("AirBas","me",56,44);
     Cargo_Flights ca = new Cargo_Flights(566,17,A1,A2,cargo,p1,1000,6);
 //
 //    System.out.println(cargo.getLoad_in_Ton()+" tons");
