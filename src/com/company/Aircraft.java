@@ -14,7 +14,6 @@ public class Aircraft {
     public String getModel() {
         return Model;
     }
-
     public void setModel(String model) {
         Model = model;
     }

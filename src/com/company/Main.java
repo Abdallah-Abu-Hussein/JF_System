@@ -36,8 +36,12 @@ public static void main(String[] args) {
 
     Flight f = new Airliner_Flights(55,6,A1,A2,AC1,p1);
     Flight fe = new Cargo_Flights(66,3,A2,A1,cargo,p1,400,3);
-
+//ploymrophism
+    Passenger pa1 = new Passenger("toto","japan",666,16754);
+    f.add_passenger(pa1);
     System.out.println(f.get_revenue());
+    System.out.println(fe.get_revenue());
+
 
 
 //        filling the Airliner without fill method

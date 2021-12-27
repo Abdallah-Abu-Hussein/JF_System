@@ -31,11 +31,11 @@ public class Flight {
         p.setNumber_Of_trips(p.getNumber_Of_trips()+1);
     }
 
-
     public int get_revenue(){
-        int i = 0;
-        return i;
+        System.out.println("No revenue of in superclass it's = ");
+        return -1;
     }
+
     public int getFlight_Number() {
         return Flight_Number;
     }

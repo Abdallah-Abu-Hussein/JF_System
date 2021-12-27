@@ -22,6 +22,7 @@ public class Airliner_Flights extends Flight{
         for (Passenger passenger : super.Passengers) {
             total_ticket_revenue += passenger.getTicket_Price();
         }
+        System.out.print("revenue for Airliner flights based on ticket sales : \n$ ");
         return total_ticket_revenue;
     }
 }
