@@ -7,6 +7,8 @@ public class Cargo extends Aircraft {
         Load_in_Ton = load_in_Ton;
     }
 
+
+
     public int getLoad_in_Ton() {
         return Load_in_Ton;
     }

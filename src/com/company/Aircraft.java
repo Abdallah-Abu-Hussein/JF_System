@@ -11,6 +11,10 @@ public class Aircraft {
         Code = code;
     }
 
+    public void record(String e){
+        Black_Box b = Black_Box.getInstance();
+        b.addEvent(e);
+    }
     public String getModel() {
         return Model;
     }

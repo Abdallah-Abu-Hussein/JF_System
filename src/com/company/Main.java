@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 //    [12/23 8:17 PM] Mohammed Mahmoud Eshtay
 
-//    create flights
+    //    create flights
 //
 //    different types of flights
 //
@@ -19,30 +19,40 @@ public class Main {
 //
 //    display passengers for some flight
 //
-public static void main(String[] args) {
-    System.out.println(" Welcome Home, Welcome to JK flight System Command line Interface, We don't have money to build real UI !!");
-    System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+    public static void main(String[] args) {
+        System.out.println(" Welcome Home, Welcome to JK flight System Command line Interface, We don't have money to build real UI !!");
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 //////////////// first test flight from Amman to Dubai, it's an Airliner filled with passengers \\\\\\\\\\\\\\\\\\\\\
-    Airport A1 = new Airport("Queen Alia International Airport","Amman","jordan");
-    Airport A2 = new Airport("United Arab Emirates Dubai International","Dubai","United Arab Emirates");
+        Airport A1 = new Airport("Queen Alia International Airport", "Amman", "jordan");
+        Airport A2 = new Airport("United Arab Emirates Dubai International", "Dubai", "United Arab Emirates");
 
-    Airliner AC1 = new Airliner("kia","Asac",684,200);
+        Airliner AC1 = new Airliner("kia", "Asac", 684, 200);
 
-    Pilot p1 = new Pilot("jack","British",769854);
+        Pilot p1 = new Pilot("jack", "British", 769854);
 
-    Airliner_Flights f1 = new Airliner_Flights(54738389,33,A1,A2,AC1,p1);
+        Airliner_Flights f1 = new Airliner_Flights(54738389, 33, A1, A2, AC1, p1);
 
-    Cargo cargo = new Cargo("AirBas","me",56,44);
+        Cargo cargo = new Cargo("AirBas", "me", 56, 44);
 
-    Flight f = new Airliner_Flights(55,6,A1,A2,AC1,p1);
-    Flight fe = new Cargo_Flights(66,3,A2,A1,cargo,p1,400,3);
+        Flight f = new Airliner_Flights(55, 6, A1, A2, AC1, p1);
+        Flight fe = new Cargo_Flights(66, 3, A2, A1, cargo, p1, 400, 3);
 //ploymrophism
-    Passenger pa1 = new Passenger("toto","japan",666,16754);
-    f.add_passenger(pa1);
-    System.out.println(f.get_revenue());
-    System.out.println(fe.get_revenue());
+        Passenger pa1 = new Passenger("toto", "japan", 666, 16754);
+//    f.add_passenger(pa1);
+//    System.out.println(f.get_revenue());
+//    System.out.println(fe.get_revenue());
 
+        /// testing singleton
+        f.getAircraft().record("starting the engine");
 
+        Black_Box b2 = Black_Box.getInstance();
+        Black_Box b3 = Black_Box.getInstance();
+
+        b2.addEvent("testing singlton");
+        b3.addEvent("test two");
+
+        b2.displayEvents();
+        System.out.println(b2.hashCode()+"\n"+b3.hashCode());
 
 //        filling the Airliner without fill method
 
@@ -55,21 +65,20 @@ public static void main(String[] args) {
 //        f1.fill_flight(); //*** if you want to test the method uncomment it from class Airliner flights ***
 
 
-
 //************ TESTs with Sys.out **********
 
 
-    //** first Airports **\\
+        //** first Airports **\\
 
 //         System.out.println("Queen Alia International Airport info = \n"+A1);
 //         System.out.println("United Arab Emirates Dubai International info = \n " + A2);
 
-    //***checking list of flights for those Airports :
+        //***checking list of flights for those Airports :
 
-    //System.out.println("Departing_flights = "+A1.Departing_flights);
+        //System.out.println("Departing_flights = "+A1.Departing_flights);
 
-    //** this should be empty list =
-    //System.out.println(A1.Arrival_flights);
+        //** this should be empty list =
+        //System.out.println(A1.Arrival_flights);
 
 //**********flight info *****************\\
 
@@ -108,16 +117,13 @@ public static void main(String[] args) {
 ////////// Testing the Cargo stuff \\\\\\\\\
 
 
-
-    Cargo_Flights ca = new Cargo_Flights(566,17,A1,A2,cargo,p1,1000,6);
+        Cargo_Flights ca = new Cargo_Flights(566, 17, A1, A2, cargo, p1, 1000, 6);
 //
 //    System.out.println(cargo.getLoad_in_Ton()+" tons");
 //    System.out.println("revenue: $ "+ca.get_revenue());
 
 
-
-}
-
+    }
 
 
 }
